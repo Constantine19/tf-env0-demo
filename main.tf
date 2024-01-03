@@ -1,10 +1,13 @@
-
-variable "s3_bucket_name" {
-  type    = "list"
-  default = ["kosta_1", "kosta_2"]
+resource "aws_s3_bucket" "demo_bucket1" {
+  bucket = "kosta_1"
 }
 
-resource "aws_s3_bucket" "henrys_bucket" {
-  count         = "${length(var.s3_bucket_name)}"
-  bucket        = "${element(var.s3_bucket_name, count.index)}"
+#Resource to create s3 bucket
+resource "aws_s3_bucket" "demo_bucket2" {
+  bucket = "kosta_2"
+}
+
+#Resource to create s3 bucket
+resource "aws_s3_bucket" "demo_bucket3" {
+  bucket = "kosta_3"
 }
