@@ -1,0 +1,19 @@
+version: 2
+
+deploy:
+  steps:
+    setupVariables:
+      after:
+        - name: Kosta Plugin
+          use: https://github.com/Constantine19/env0-json-plugin
+          inputs: {}
+#     terraformInit:
+#       before:
+#    terraformPlan:
+#      after:
+#  onCompletion:
+#    - type: string
+#  onSuccess:
+#    - type: string
+#  onFailure:
+#    - type: string
