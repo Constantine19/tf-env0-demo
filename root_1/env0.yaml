@@ -7,6 +7,8 @@ deploy:
         - name: Kosta Plugin
           use: https://github.com/Constantine19/env0-json-plugin
           inputs: {}
+        - name: Debug
+          run: export
 #     terraformInit:
 #       before:
 #    terraformPlan:
