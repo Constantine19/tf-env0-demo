@@ -1,21 +1,13 @@
 version: 2
 
 deploy:
-  steps:
-    setupVariables:
-      after:
-        - name: Kosta Plugin
-          use: https://github.com/Constantine19/env0-json-plugin
-          inputs: {}
-        - name: Debug
-          run: export
-#     terraformInit:
-#       before:
-#    terraformPlan:
-#      after:
-#  onCompletion:
-#    - type: string
-#  onSuccess:
-#    - type: string
-#  onFailure:
-#    - type: string
+steps:
+  setupVariables:
+    after:
+      - name: Kosta Plugin
+        use: https://github.com/Constantine19/env0-json-plugin
+        inputs:
+          secret_prefix: kosta_ssn
+          secret_aws_region: us-east-1
+      - name: Debug
+        run: export
